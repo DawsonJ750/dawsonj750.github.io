@@ -3,10 +3,30 @@
     <title>Schawang Cattle Co</title>
     <link href="https://www.schawangcattle.com/feed.xml" rel="self" />
     <link href="https://www.schawangcattle.com" />
-    <updated>1969-12-31T18:00:00-06:00</updated>
+    <updated>2026-09-12T18:06:05-05:00</updated>
     <author>
         <name>Dawson</name>
     </author>
     <id>https://www.schawangcattle.com</id>
 
+    <entry>
+        <title>Where is this going to show up, or is it going to show up at all</title>
+        <author>
+            <name>Dawson</name>
+        </author>
+        <link href="https://www.schawangcattle.com/where-is-this-going-to-show-up-or-is-it-going-to-show-up-at-all.html"/>
+        <id>https://www.schawangcattle.com/where-is-this-going-to-show-up-or-is-it-going-to-show-up-at-all.html</id>
+
+        <updated>2026-09-12T18:06:05-05:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    aesf ae fdesrao djflaskjd flkjea s?
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>aesf ae fdesrao djflaskjd flkjea s?</p>
+            ]]>
+        </content>
+    </entry>
 </feed>
