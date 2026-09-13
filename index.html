@@ -1,12 +1,381 @@
-<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Schawang Cattle Co</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://www.schawangcattle.com/"><link rel="alternate" type="application/atom+xml" href="https://www.schawangcattle.com/feed.xml" title="Schawang Cattle Co - RSS"><link rel="alternate" type="application/json" href="https://www.schawangcattle.com/feed.json" title="Schawang Cattle Co - JSON"><meta property="og:title" content="Schawang Cattle Co"><meta property="og:image" content="https://www.schawangcattle.com/media/website/scc-2.png"><meta property="og:image:width" content="256"><meta property="og:image:height" content="256"><meta property="og:site_name" content="Schawang Cattle Co"><meta property="og:description" content=""><meta property="og:url" content="https://www.schawangcattle.com/"><meta property="og:type" content="website"><link rel="stylesheet" href="https://www.schawangcattle.com/assets/css/style.css?v&#x3D;a0ba884548820066dfadd8416036abba"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Schawang Cattle Co","logo":"https://www.schawangcattle.com/media/website/scc-2.png","url":"https://www.schawangcattle.com/"}</script><noscript><style>img[loading] {
-                    opacity: 1;
-                }</style></noscript></head><body class="home-template"><header class="top js-header"><a class="logo" href="https://www.schawangcattle.com/"><img src="https://www.schawangcattle.com/media/website/scc-2.png" alt="Schawang Cattle Co" width="256" height="256"></a></header><main><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h1>COWS!!! COWS!!! they MOO!! it's CRAZY!!!</h1><p>Selling cows some time in march, probably</p></div></header></div><div class="wrapper feed"><article class="feed__item feed__item--centered"><div class="feed__content"><header><div class="feed__meta"><a href="https://www.schawangcattle.com/authors/dawson/" class="feed__author">Dawson</a> <time datetime="2026-09-12T18:06" class="feed__date">September 12, 2026</time></div><h2 class="feed__title"><a href="https://www.schawangcattle.com/where-is-this-going-to-show-up-or-is-it-going-to-show-up-at-all.html">Something about cows</a></h2></header><p>cow fact - the average cow has less than 4 legs</p><a href="https://www.schawangcattle.com/where-is-this-going-to-show-up-or-is-it-going-to-show-up-at-all.html" class="readmore feed__readmore">Continue reading...</a></div></article></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>Powered by Publii</p></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://www.schawangcattle.com/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://www.schawangcattle.com/assets/js/scripts.min.js?v&#x3D;dafec4f87fead6718cb125f0b0fc8441"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
-        for (var i = 0; i < images.length; i++) {
-            if (images[i].complete) {
-                images[i].classList.add('is-loaded');
-            } else {
-                images[i].addEventListener('load', function () {
-                    this.classList.add('is-loaded');
-                }, false);
-            }
-        }</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schawang Cattle Co.</title>
+<style>
+
+/* TOOK THESE COLORS FROM THE LOGO BANNER */
+/* IF YOU WANT TO CHANGE A COLOR ON THE PAGE CHANGE IT HERE */
+:root {
+  --red: #b8232a;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --paper: #faf9f6;
+  --line: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e7e2d3; /* BACKGROUND COLOR IF BACKGROUND IMAGE DOESNT LOAD YOU CAN PROBABLY FORGET THIS EXISTS IF YOU HAVE AN IMAGE*/
+  background-image: url('images/hero-cattle.jpg'); /* PUT THE BACKGROUND IMAGE IN THE IMAGES FOLDER THEN LINK TO IT HERE K THX LOVE YOU */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--black);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--red);
+}
+
+/* FUNNY HOVER STUFF FOR SALE LINK THINGY YOU CAN LEAVE THIS ALONE*/
+a:hover {
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* PAGE FRAME STUFF YOU CAN PROBABLY LEAVE THIS ALONE*/
+.page-frame {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: var(--paper);
+  border: 10px solid var(--black);
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 700px) {
+  .page-frame {
+    margin: 0;
+    border-width: 6px;
+    min-height: 100vh;
+  }
+}
+
+/* LOGO BANNER FORMATTING YOU CAN PROBABLY LEAVE THIS ALONE */
+.banner {
+  width: 100%;
+  border-bottom: 6px solid var(--black);
+}
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+/* PAGE LAYOUT STUFF */
+main {
+  flex: 1;
+  padding: 2rem 1rem 3rem 1rem;
+}
+.content-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1, h2, h3 {
+  color: var(--black);
+  font-family: Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* PAGE IS SET UP WITH TWO COLUMNS, YOU CAN ADJUST THE WIDTHS AND GAP AS NEEDED */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 700px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* CATALOG BOX SECTION FORMATTING*/
+.pdf-tile {
+  display: block;
+  border: 3px solid var(--black);
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black) !important;
+  background-color: var(--white);
+}
+.pdf-tile:hover {
+  border-color: var(--red);
+}
+.pdf-tile img {
+  margin: 0 auto 0.6rem auto;
+  border: 1px solid var(--line);
+  max-width: 280px;
+}
+.pdf-tile .pdf-tile-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
+
+/* BEEF SALES TABLE FORMATTING */
+.beef-table-wrap h2 {
+  font-size: 1.3rem;
+  border-bottom: 3px solid var(--red);
+  padding-bottom: 0.3rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+table.beef-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+table.beef-table th,
+table.beef-table td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--black);
+}
+table.beef-table th {
+  background-color: var(--black);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.95rem;
+}
+table.beef-table td.price {
+  color: var(--red);
+  font-weight: bold;
+}
+
+/* SALE INFO SECTION FORMATTING */
+.sale-info h2 {
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--red);
+  padding-bottom: 0.3rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.sale-info p {
+  margin: 0.4rem 0;
+  font-size: 1.1rem;
+}
+.sale-info .sale-date {
+  font-weight: bold;
+  color: var(--red);
+}
+
+/* HERD HEALTH SECTION FORMATTING */
+.herd-health {
+  margin-top: 2rem;
+}
+.herd-health h2 {
+  font-size: 1.4rem;
+  border-bottom: 3px solid var(--red);
+  padding-bottom: 0.3rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.herd-health p {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+/* STREAM LINK BUTTON FORMATTING */
+.stream-link {
+  margin-top: 0.5rem;
+}
+.stream-link a {
+  display: inline-block;
+  background-color: var(--black);
+  color: var(--white) !important;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--black);
+}
+.stream-link a:hover {
+  background-color: var(--red);
+  border-color: var(--red);
+}
+
+/* CONTACT INFO FORMATTING */
+.contact-block {
+  text-align: center;
+  border-top: 4px solid var(--black);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+.contact-block h2 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.contact-block h2 .star {
+  color: var(--red);
+  padding: 0 0.5rem;
+}
+.contact-block p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+/* PAGE FOOTER FORMATTING*/
+footer.site-footer {
+  text-align: center;
+  padding: 1.75rem 1rem;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  border-top: 4px solid var(--red);
+}
+footer.site-footer a {
+  color: var(--white);
+  text-decoration: underline;
+}
+footer.site-footer a:hover {
+  color: var(--red);
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="page-frame">
+
+<!-- LINK TO YOUR BANNER IMAGE HERE -->
+<div class="banner">
+  <img src="images/header-banner.jpg" alt="Schawang Cattle Co. - David City, NE">
+</div>
+
+<main>
+<div class="content-inner">
+
+  <!-- LEFT AND RIGHT COLUMNS UNDER THIS DIV -->
+  <div class="layout-grid">
+
+    <!-- LEFT COLUMN LEFT COLUMN LEFT COLUMN LEFT COLUMN LEFT COLUMN LEFT COLUMN -->
+    <div class="column">
+
+      <!-- PDF CATALOG -->
+      <!-- PUT THE PDF IN THE PDFS FOLDER AND NAME IT "catalog.pdf" OR CHANGE THE LINKED PDF IN THE HREF -->
+      <!-- UPDATE THE PDF THUMBNAIL SIMILARLY, PUT IT IN IMAGES FOLDER AND NAME IT "catalog-cover.jpg" OR CHANGE THE LINKED IMAGE IN THE HREF -->
+      <a class="pdf-tile" href="pdfs/catalog.pdf" target="_blank">
+        <img src="images/catalog-cover.jpg" alt="2026 Sale Catalog cover">
+        <span class="pdf-tile-title">2026 Sale Catalog</span>
+      </a>
+
+      <!-- BEEF SALES PRICING TABLE -->
+      <div class="beef-table-wrap">
+        <h2>Beef Sales</h2>
+        <table class="beef-table">
+          <thead>
+            <tr>
+              <th>Cut</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ground Beef</td>
+              <td class="price">$5 / lb</td>
+            </tr>
+            <tr>
+              <td>Ribeye</td>
+              <td class="price">$25 / lb</td>
+            </tr>
+            <tr>
+              <td>Filet</td>
+              <td class="price">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <!-- END LEFT COLUMN END LEFT COLUMN END LEFT COLUMN END LEFT COLUMN END LEFT COLUMN END LEFT COLUMN -->
+
+    <!-- RIGHT COLUMN RIGHT COLUMN RIGHT COLUMN RIGHT COLUMN RIGHT COLUMN RIGHT COLUMN -->
+    <div class="column">
+
+      <!-- EDIT SALE INFO LINES HERE -->
+      <div class="sale-info">
+        <h2>Sale Info</h2>
+        <p class="sale-date">29th Annual Best of All Worlds Sale</p>
+        <p><b>March 21, 2026, 1:00 PM CST</b></p>
+        <p>3271 K Road, David City, NE</p>
+        <p>Lunch provided</p>
+        <p>Selling 33 Bulls and 19 Open Heifers</p>
+
+        <!-- PUT THE LINK TO THE SALE HERE -->
+        <p class="stream-link">
+          <a href="https://www.dvauction.com" target="_blank">Watch &amp; Bid Online</a>
+        </p>
+      </div>
+
+      <!-- HERD HEALTH SECTION HERE -->
+      <div class="herd-health">
+        <h2>Herd Health</h2>
+        <p>All females are preg-checked open. Cattle have been managed with a comprehensive vaccination program and parasite control.</p>
+        <p>Bulls will be semen checked. All bulls are virgins.</p>
+        <p>Our herd is at stage 5 of the Johnes Herd Certification program.</p>
+        <p>All animals in the sale have been tested negative for BVD.</p>
+      </div>
+
+    </div>
+    <!-- END RIGHT COLUMN END RIGHT COLUMN END RIGHT COLUMN END RIGHT COLUMN END RIGHT COLUMN END RIGHT COLUMN -->
+
+  </div>
+  <!-- END OF LEFT AND RIGHT COLUMNS -->
+
+  <!-- CONTACT INFO SECTION -->
+  <div class="contact-block">
+    <h2><span class="star">&#9733;</span>Contact Info<span class="star">&#9733;</span></h2>
+    <p>Randy &amp; Mindy Schawang</p>
+    <p>3271 Co. Rd. K, David City, NE 68632</p>
+    <p>Randy's Cell: 402-367-2345 &nbsp;&bull;&nbsp; Mindy's Cell: 402-367-8280</p>
+  </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  &copy; <span id="year"></span> Schawang Cattle Co.
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
